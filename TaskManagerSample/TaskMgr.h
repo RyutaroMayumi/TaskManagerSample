@@ -3,7 +3,7 @@
 #include "Task.h"
 #include <functional>
 #include <list>
-#include <exception>
+//#include <exception>
 
 #define DebugPrint( message )	fprintf( stderr, message )
 
@@ -285,12 +285,12 @@ public:
 
 private:
 	//ソート用静的メンバ関数（オペレータが機能しないため）
-	static bool SortDescending(Task *task1, Task *task2)
+	inline static bool SortDescending(Task *task1, Task *task2)
 	{
 		return task1->GetPriority() > task2->GetPriority();
 	}
 
-	static bool SortAscending(Task *task1, Task *task2)
+	inline static bool SortAscending(Task *task1, Task *task2)
 	{
 		return task1->GetPriority() < task2->GetPriority();
 	}

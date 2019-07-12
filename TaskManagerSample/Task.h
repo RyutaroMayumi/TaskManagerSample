@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <cstdint>
+#include <exception>
 
 using namespace std;
 
@@ -202,6 +203,14 @@ public:
 		this->m_name.clear();
 		this->m_name = name;
 	}
+
+	//!ƒOƒ‹[ƒvID‚ğİ’è‚·‚é
+	//@param [in] uint16_t
+	inline void SetGID(uint16_t gid)
+	{
+		m_gid = gid;
+	}
+
 	//public://enumerator
 	//enum ComparePattern{PRIORITY, NAME, ID};
 
